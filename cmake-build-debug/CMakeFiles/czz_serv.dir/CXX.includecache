@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/zhangcl/czz_serv/protocol.cpp
+protocol.h
+/home/zhangcl/czz_serv/protocol.h
+stdio.h
+-
+netinet/in.h
+-
+string.h
+-
+unistd.h
+-
+sys/stat.h
+-
+sys/types.h
+-
+fcntl.h
+-
+errno.h
+-
+
+/home/zhangcl/czz_serv/protocol.h
+stddef.h
+-
+vector
+-
+

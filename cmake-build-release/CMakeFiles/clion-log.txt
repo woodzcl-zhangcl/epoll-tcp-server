@@ -1,0 +1,4 @@
+/home/zhangcl/Clion/clion-2018.2.6/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Release -G "CodeBlocks - Unix Makefiles" /home/zhangcl/czz_serv
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/zhangcl/czz_serv/cmake-build-release
