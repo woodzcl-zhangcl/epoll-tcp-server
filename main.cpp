@@ -14,7 +14,15 @@ void Stop(int signo)
     bRun = false;
 }
 
-int main() {
+int main(int argc, char *argv[]) {
+    if (argc < 2) {
+        printf("Usage: czz_serv port\n");
+        return 0;
+    }
+
+    char* stopstring;
+    int Port = (int)strtol(argv[1], &stopstring, 10);
+
     signal(SIGINT, Stop);
 
     struct sigaction sa = {0};
@@ -24,7 +32,7 @@ int main() {
 //    prxml xml;
 //    xml.Parse("ck_info.xml");
 
-    tcpserv serv(8096);
+    tcpserv serv(Port);
     serv.start();
 
     while(bRun) {
