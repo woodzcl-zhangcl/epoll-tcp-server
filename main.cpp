@@ -6,6 +6,8 @@
 #include "prxml.h"
 #include "tcpserv.h"
 
+#include "prmysql.h"
+
 bool bRun = true;
 
 void Stop(int signo)
@@ -31,6 +33,15 @@ int main(int argc, char *argv[]) {
 
 //    prxml xml;
 //    xml.Parse("ck_info.xml");
+
+    prmysql sql("127.0.0.1", "test", "test");
+    if (!sql.IsExistDB())
+    {
+        if (sql.createDB())
+        {
+            sql.createTB();
+        }
+    }
 
     tcpserv serv(Port);
     serv.start();

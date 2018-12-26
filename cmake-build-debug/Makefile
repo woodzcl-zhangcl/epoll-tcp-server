@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/czz_serv.dir/build.make CMakeFiles/czz_serv.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+prmysql.o: prmysql.cpp.o
+
+.PHONY : prmysql.o
+
+# target to build an object file
+prmysql.cpp.o:
+	$(MAKE) -f CMakeFiles/czz_serv.dir/build.make CMakeFiles/czz_serv.dir/prmysql.cpp.o
+.PHONY : prmysql.cpp.o
+
+prmysql.i: prmysql.cpp.i
+
+.PHONY : prmysql.i
+
+# target to preprocess a source file
+prmysql.cpp.i:
+	$(MAKE) -f CMakeFiles/czz_serv.dir/build.make CMakeFiles/czz_serv.dir/prmysql.cpp.i
+.PHONY : prmysql.cpp.i
+
+prmysql.s: prmysql.cpp.s
+
+.PHONY : prmysql.s
+
+# target to generate assembly for a file
+prmysql.cpp.s:
+	$(MAKE) -f CMakeFiles/czz_serv.dir/build.make CMakeFiles/czz_serv.dir/prmysql.cpp.s
+.PHONY : prmysql.cpp.s
+
 protocol.o: protocol.cpp.o
 
 .PHONY : protocol.o
@@ -297,6 +324,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... prmysql.o"
+	@echo "... prmysql.i"
+	@echo "... prmysql.s"
 	@echo "... protocol.o"
 	@echo "... protocol.i"
 	@echo "... protocol.s"

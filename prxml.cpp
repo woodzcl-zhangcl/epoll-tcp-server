@@ -105,7 +105,7 @@ int prxml::Parse(const char* szDocName) {
             xmlSecond = xmlSecond->next;
             if (xmlSecond->type == XML_TEXT_NODE)
                 xmlSecond = xmlSecond->next;
-            if (!xmlStrcmp(xmlSecond->name, BAD_CAST "MemoryCapatity"))
+            if (!xmlStrcmp(xmlSecond->name, BAD_CAST "MemoryCapacity"))
             {
                 if (xmlHasProp(xmlSecond, BAD_CAST "Value"))
                 {

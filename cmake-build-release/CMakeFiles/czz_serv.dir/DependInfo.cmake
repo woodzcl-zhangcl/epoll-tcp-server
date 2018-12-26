@@ -5,6 +5,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/zhangcl/czz_serv/main.cpp" "/home/zhangcl/czz_serv/cmake-build-release/CMakeFiles/czz_serv.dir/main.cpp.o"
+  "/home/zhangcl/czz_serv/prmysql.cpp" "/home/zhangcl/czz_serv/cmake-build-release/CMakeFiles/czz_serv.dir/prmysql.cpp.o"
   "/home/zhangcl/czz_serv/protocol.cpp" "/home/zhangcl/czz_serv/cmake-build-release/CMakeFiles/czz_serv.dir/protocol.cpp.o"
   "/home/zhangcl/czz_serv/prxml.cpp" "/home/zhangcl/czz_serv/cmake-build-release/CMakeFiles/czz_serv.dir/prxml.cpp.o"
   "/home/zhangcl/czz_serv/tcpserv.cpp" "/home/zhangcl/czz_serv/cmake-build-release/CMakeFiles/czz_serv.dir/tcpserv.cpp.o"
