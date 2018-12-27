@@ -13,6 +13,9 @@
 #include <fcntl.h>
 #include <errno.h>
 
+#include "prmysql.h"
+#include "prxml.h"
+
 protocol::protocol() {
 
 }
@@ -219,8 +222,8 @@ unsigned char* protocol::command(unsigned char header, unsigned char* pSrc, size
                 ret = mkdir(path, S_IRWXU);
             }
 
+            char pathfile[256] = {0};
             if (0 == ret) {
-                char pathfile[256] = {0};
                 sprintf(pathfile, "%s/ck_info.xml", path);
                 int fd = open(pathfile, O_WRONLY|O_CREAT|O_TRUNC, S_IRWXU);
 
@@ -236,6 +239,13 @@ unsigned char* protocol::command(unsigned char header, unsigned char* pSrc, size
             char* err = new char[256];
             strcpy(err, "ok");
             *pOutLen = strlen(err) + 1;
+
+            prmysql* sql = new prmysql(db_ip.c_str(), db_password.c_str(), db_password.c_str(), true);
+            sql->SetID(pID);
+            prxml xml;
+            xml.Parse(pathfile);
+            sql->CheckFileToDB(xml.hardwareinfo, xml.shieldinfo, xml.serviceinfo, xml.softwareinfo);
+            delete sql;
 
             return (unsigned char *)err;
         }

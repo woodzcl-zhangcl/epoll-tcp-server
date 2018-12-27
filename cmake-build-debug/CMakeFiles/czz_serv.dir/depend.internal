@@ -11,9 +11,12 @@ CMakeFiles/czz_serv.dir/main.cpp.o
 CMakeFiles/czz_serv.dir/prmysql.cpp.o
  /home/zhangcl/czz_serv/prmysql.cpp
  /home/zhangcl/czz_serv/prmysql.h
+ /home/zhangcl/czz_serv/prxml.h
 CMakeFiles/czz_serv.dir/protocol.cpp.o
+ /home/zhangcl/czz_serv/prmysql.h
  /home/zhangcl/czz_serv/protocol.cpp
  /home/zhangcl/czz_serv/protocol.h
+ /home/zhangcl/czz_serv/prxml.h
 CMakeFiles/czz_serv.dir/prxml.cpp.o
  /home/zhangcl/czz_serv/prxml.cpp
  /home/zhangcl/czz_serv/prxml.h

@@ -10,9 +10,12 @@ CMakeFiles/czz_serv.dir/main.cpp.o: ../userdeal.h
 
 CMakeFiles/czz_serv.dir/prmysql.cpp.o: ../prmysql.cpp
 CMakeFiles/czz_serv.dir/prmysql.cpp.o: ../prmysql.h
+CMakeFiles/czz_serv.dir/prmysql.cpp.o: ../prxml.h
 
+CMakeFiles/czz_serv.dir/protocol.cpp.o: ../prmysql.h
 CMakeFiles/czz_serv.dir/protocol.cpp.o: ../protocol.cpp
 CMakeFiles/czz_serv.dir/protocol.cpp.o: ../protocol.h
+CMakeFiles/czz_serv.dir/protocol.cpp.o: ../prxml.h
 
 CMakeFiles/czz_serv.dir/prxml.cpp.o: ../prxml.cpp
 CMakeFiles/czz_serv.dir/prxml.cpp.o: ../prxml.h

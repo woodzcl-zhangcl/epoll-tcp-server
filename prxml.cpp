@@ -66,6 +66,8 @@ int prxml::Parse(const char* szDocName) {
                 if (xmlHasProp(xmlSecond, BAD_CAST "Value"))
                 {
                     xmlChar* szValue = xmlGetProp(xmlSecond, BAD_CAST "Value");
+                    hardwareinfo["MachineName"] = std::string((char *) szValue);
+                    xmlFree(szValue);
                 }
             }
 
@@ -77,6 +79,8 @@ int prxml::Parse(const char* szDocName) {
                 if (xmlHasProp(xmlSecond, BAD_CAST "Value"))
                 {
                     xmlChar* szValue = xmlGetProp(xmlSecond, BAD_CAST "Value");
+                    hardwareinfo["MotherboardID"] = std::string((char *) szValue);
+                    xmlFree(szValue);
                 }
             }
 
@@ -88,6 +92,8 @@ int prxml::Parse(const char* szDocName) {
                 if (xmlHasProp(xmlSecond, BAD_CAST "Value"))
                 {
                     xmlChar* szValue = xmlGetProp(xmlSecond, BAD_CAST "Value");
+                    hardwareinfo["CPUType"] = std::string((char *) szValue);
+                    xmlFree(szValue);
                 }
             }
 
@@ -99,6 +105,8 @@ int prxml::Parse(const char* szDocName) {
                 if (xmlHasProp(xmlSecond, BAD_CAST "Value"))
                 {
                     xmlChar* szValue = xmlGetProp(xmlSecond, BAD_CAST "Value");
+                    hardwareinfo["CPUNumber"] = std::string((char *) szValue);
+                    xmlFree(szValue);
                 }
             }
 
@@ -110,6 +118,8 @@ int prxml::Parse(const char* szDocName) {
                 if (xmlHasProp(xmlSecond, BAD_CAST "Value"))
                 {
                     xmlChar* szValue = xmlGetProp(xmlSecond, BAD_CAST "Value");
+                    hardwareinfo["MemoryCapacity"] = std::string((char *) szValue);
+                    xmlFree(szValue);
                 }
             }
 
@@ -121,6 +131,8 @@ int prxml::Parse(const char* szDocName) {
                 if (xmlHasProp(xmlSecond, BAD_CAST "Value"))
                 {
                     xmlChar* szValue = xmlGetProp(xmlSecond, BAD_CAST "Value");
+                    hardwareinfo["MemoryNumber"] = std::string((char *) szValue);
+                    xmlFree(szValue);
                 }
             }
 
@@ -132,6 +144,8 @@ int prxml::Parse(const char* szDocName) {
                 if (xmlHasProp(xmlSecond, BAD_CAST "Value"))
                 {
                     xmlChar* szValue = xmlGetProp(xmlSecond, BAD_CAST "Value");
+                    hardwareinfo["DiskType"] = std::string((char *) szValue);
+                    xmlFree(szValue);
                 }
             }
 
@@ -143,6 +157,8 @@ int prxml::Parse(const char* szDocName) {
                 if (xmlHasProp(xmlSecond, BAD_CAST "Value"))
                 {
                     xmlChar* szValue = xmlGetProp(xmlSecond, BAD_CAST "Value");
+                    hardwareinfo["DiskCapacity"] = std::string((char *) szValue);
+                    xmlFree(szValue);
                 }
             }
 
@@ -154,6 +170,8 @@ int prxml::Parse(const char* szDocName) {
                 if (xmlHasProp(xmlSecond, BAD_CAST "Value"))
                 {
                     xmlChar* szValue = xmlGetProp(xmlSecond, BAD_CAST "Value");
+                    hardwareinfo["DiskNumber"] = std::string((char *) szValue);
+                    xmlFree(szValue);
                 }
             }
 
@@ -165,6 +183,8 @@ int prxml::Parse(const char* szDocName) {
                 if (xmlHasProp(xmlSecond, BAD_CAST "Value"))
                 {
                     xmlChar* szValue = xmlGetProp(xmlSecond, BAD_CAST "Value");
+                    hardwareinfo["DiskPartition"] = std::string((char *) szValue);
+                    xmlFree(szValue);
                 }
             }
 
@@ -176,6 +196,8 @@ int prxml::Parse(const char* szDocName) {
                 if (xmlHasProp(xmlSecond, BAD_CAST "Value"))
                 {
                     xmlChar* szValue = xmlGetProp(xmlSecond, BAD_CAST "Value");
+                    hardwareinfo["LocalIP"] = std::string((char *) szValue);
+                    xmlFree(szValue);
                 }
             }
 
@@ -187,6 +209,8 @@ int prxml::Parse(const char* szDocName) {
                 if (xmlHasProp(xmlSecond, BAD_CAST "Value"))
                 {
                     xmlChar* szValue = xmlGetProp(xmlSecond, BAD_CAST "Value");
+                    hardwareinfo["VideoCardType"] = std::string((char *) szValue);
+                    xmlFree(szValue);
                 }
             }
 
@@ -198,6 +222,8 @@ int prxml::Parse(const char* szDocName) {
                 if (xmlHasProp(xmlSecond, BAD_CAST "Value"))
                 {
                     xmlChar* szValue = xmlGetProp(xmlSecond, BAD_CAST "Value");
+                    hardwareinfo["VideoCardNumber"] = std::string((char *) szValue);
+                    xmlFree(szValue);
                 }
             }
         }
@@ -212,18 +238,26 @@ int prxml::Parse(const char* szDocName) {
                     if (!xmlSecond)
                         break;
                 }
+                ST_SHIELD st_t;
                 if (xmlHasProp(xmlSecond, BAD_CAST "displayName"))
                 {
                     xmlChar* szDisplayName = xmlGetProp(xmlSecond, BAD_CAST "displayName");
+                    st_t.displayName = std::string((char *)szDisplayName);
+                    xmlFree(szDisplayName);
                 }
                 if (xmlHasProp(xmlSecond, BAD_CAST "pathToSignedProductExe"))
                 {
                     xmlChar* szPathToSignedProductExe = xmlGetProp(xmlSecond, BAD_CAST "pathToSignedProductExe");
+                    st_t.pathToSignedProductExe = std::string((char *)szPathToSignedProductExe);
+                    xmlFree(szPathToSignedProductExe);
                 }
-                if (xmlHasProp(xmlSecond, BAD_CAST "pathToSignedProductExe"))
+                if (xmlHasProp(xmlSecond, BAD_CAST "status"))
                 {
                     xmlChar* szstatus = xmlGetProp(xmlSecond, BAD_CAST "status");
+                    st_t.status = std::string((char *)szstatus);
+                    xmlFree(szstatus);
                 }
+                shieldinfo.push_back(st_t);
                 xmlSecond = xmlSecond->next;
             }
         }
@@ -238,22 +272,32 @@ int prxml::Parse(const char* szDocName) {
                     if (!xmlSecond)
                         break;
                 }
+                ST_SERVICE st_t;
                 if (xmlHasProp(xmlSecond, BAD_CAST "DisplayName"))
                 {
                     xmlChar* szDisplayName = xmlGetProp(xmlSecond, BAD_CAST "DisplayName");
+                    st_t.DisplayName = std::string((char *) szDisplayName);
+                    xmlFree(szDisplayName);
                 }
                 if (xmlHasProp(xmlSecond, BAD_CAST "ServiceName"))
                 {
                     xmlChar* szServiceName = xmlGetProp(xmlSecond, BAD_CAST "ServiceName");
+                    st_t.ServiceName = std::string((char *) szServiceName);
+                    xmlFree(szServiceName);
                 }
                 if (xmlHasProp(xmlSecond, BAD_CAST "ServiceType"))
                 {
                     xmlChar* szServiceType = xmlGetProp(xmlSecond, BAD_CAST "ServiceType");
+                    st_t.ServiceType = std::string((char *) szServiceType);
+                    xmlFree(szServiceType);
                 }
                 if (xmlHasProp(xmlSecond, BAD_CAST "status"))
                 {
                     xmlChar* szStatus = xmlGetProp(xmlSecond, BAD_CAST "status");
+                    st_t.status = std::string((char *) szStatus);
+                    xmlFree(szStatus);
                 }
+                serviceinfo.push_back(st_t);
                 xmlSecond = xmlSecond->next;
             }
         }
@@ -268,22 +312,32 @@ int prxml::Parse(const char* szDocName) {
                     if (!xmlSecond)
                         break;
                 }
+                ST_SOFTWARE st_t;
                 if (xmlHasProp(xmlSecond, BAD_CAST "Name"))
                 {
                     xmlChar* szName = xmlGetProp(xmlSecond, BAD_CAST "Name");
+                    st_t.Name = std::string((char *) szName);
+                    xmlFree(szName);
                 }
                 if (xmlHasProp(xmlSecond, BAD_CAST "PubName"))
                 {
                     xmlChar* szPubName = xmlGetProp(xmlSecond, BAD_CAST "PubName");
+                    st_t.PubName = std::string((char *) szPubName);
+                    xmlFree(szPubName);
                 }
                 if (xmlHasProp(xmlSecond, BAD_CAST "Version"))
                 {
                     xmlChar* szVersion = xmlGetProp(xmlSecond, BAD_CAST "Version");
+                    st_t.Version = std::string((char *) szVersion);
+                    xmlFree(szVersion);
                 }
                 if (xmlHasProp(xmlSecond, BAD_CAST "Date"))
                 {
                     xmlChar* szDate = xmlGetProp(xmlSecond, BAD_CAST "Date");
+                    st_t.Date = std::string((char *) szDate);
+                    xmlFree(szDate);
                 }
+                softwareinfo.push_back(st_t);
                 xmlSecond = xmlSecond->next;
             }
         }
