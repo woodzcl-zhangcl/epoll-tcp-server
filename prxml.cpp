@@ -305,7 +305,7 @@ int prxml::Parse(const char* szDocName) {
                 xmlSecond = xmlSecond->next;
             }
         }
-        if ((!xmlStrcmp(tapGroup->name, (const xmlChar *)"SysSoftwareInfo")))
+        if ((!xmlStrcmp(tapGroup->name, (const xmlChar *)"SoftwareInfo")))
         {
             xmlNodePtr xmlSecond = tapGroup->xmlChildrenNode;
 

@@ -495,19 +495,20 @@ std::vector<ST_STRATEGY> prmysql::GetStrategyFromDB() {
 
     res = mysql_use_result(conn);
 
-    while(NULL != (row = mysql_fetch_row(res)))
-    {
-        ST_STRATEGY st_t;
+    if (res) {
+        while (NULL != (row = mysql_fetch_row(res))) {
+            ST_STRATEGY st_t;
 
-        st_t.SgyID = row[0];
-        st_t.name = row[1];
-        st_t.des = row[2];
-        st_t.set = row[3];
+            st_t.SgyID = row[0];
+            st_t.name = row[1];
+            st_t.des = row[2];
+            st_t.set = row[3];
 
-        ret.push_back(st_t);
+            ret.push_back(st_t);
+        }
+
+        mysql_free_result(res);
     }
-
-    mysql_free_result(res);//释放记录集
 
     return ret;
 }
@@ -528,17 +529,18 @@ std::vector<ST_BWFORM> prmysql::GetBWFormFromDB() {
 
     res = mysql_use_result(conn);
 
-    while(NULL != (row = mysql_fetch_row(res)))
-    {
-        ST_BWFORM st_t;
+    if (res) {
+        while (NULL != (row = mysql_fetch_row(res))) {
+            ST_BWFORM st_t;
 
-        st_t.procname = row[0];
-        st_t.des = row[1];
+            st_t.procname = row[0];
+            st_t.des = row[1];
 
-        ret.push_back(st_t);
+            ret.push_back(st_t);
+        }
+
+        mysql_free_result(res);
     }
-
-    mysql_free_result(res);//释放记录集
 
     return ret;
 }

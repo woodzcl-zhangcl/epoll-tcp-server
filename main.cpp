@@ -40,9 +40,6 @@ int main(int argc, char *argv[]) {
     sa.sa_handler = SIG_IGN;
     sigaction(SIGPIPE, &sa, 0);
 
-//    prxml xml;
-//    xml.Parse("ck_info.xml");
-
     prmysql* sql = new prmysql(db_ip.c_str(), db_password.c_str(), db_password.c_str());
     if (!sql->IsExistDB())
     {

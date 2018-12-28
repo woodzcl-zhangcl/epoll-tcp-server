@@ -5,7 +5,7 @@
     <MotherboardID Value="A032_9980_C200_2026." />
     <CPUType value="Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz" />
     <CPUNumber Value="BFEBFBFF000806EA" />
-    <MemoryCapatity Value="8GB" />
+    <MemoryCapacity Value="8GB" />
     <MemoryNumber Value="55000000" />
     <DiskType Value="LENSE20256GMSP34MEAT2TA" />
     <DiskCapacity Value="237GB" />
@@ -25,15 +25,15 @@
     <Item DisplayName="Application Layer Gateway Service" ServiceName="ALG" ServiceType="Win32OwnProcess" status="已停止" />
     <Item DisplayName="Application Identity" ServiceName="AppIDSvc" ServiceType="Win32ShareProcess" status="已停止" />
     <Item DisplayName="Application Information" ServiceName="Appinfo" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
-    <Item DisplayName="App Readiness" ServiceName="AppReadiness" ServiceType="Win32OwnProcess, Win32ShareProcess" status="已停止" />
-    <Item DisplayName="AppX Deployment Service (AppXSVC)" ServiceName="AppXSvc" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
+    <Item DisplayName="App Readiness" ServiceName="AppReadiness" ServiceType="Win32ShareProcess" status="已停止" />
+    <Item DisplayName="AppX Deployment Service (AppXSVC)" ServiceName="AppXSvc" ServiceType="Win32OwnProcess, Win32ShareProcess" status="已停止" />
     <Item DisplayName="ApsInsSvc" ServiceName="ApsInsSvc" ServiceType="Win32OwnProcess" status="正在运行" />
     <Item DisplayName="Windows Audio Endpoint Builder" ServiceName="AudioEndpointBuilder" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="Windows Audio" ServiceName="Audiosrv" ServiceType="Win32OwnProcess" status="正在运行" />
     <Item DisplayName="ActiveX Installer (AxInstSV)" ServiceName="AxInstSV" ServiceType="Win32ShareProcess" status="已停止" />
     <Item DisplayName="BitLocker Drive Encryption Service" ServiceName="BDESVC" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="Base Filtering Engine" ServiceName="BFE" ServiceType="Win32ShareProcess" status="正在运行" />
-    <Item DisplayName="Background Intelligent Transfer Service" ServiceName="BITS" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
+    <Item DisplayName="Background Intelligent Transfer Service" ServiceName="BITS" ServiceType="Win32ShareProcess" status="已停止" />
     <Item DisplayName="Background Tasks Infrastructure Service" ServiceName="BrokerInfrastructure" ServiceType="Win32ShareProcess" status="正在运行" />
     <Item DisplayName="蓝牙音频网关服务" ServiceName="BTAGService" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="AVCTP 服务" ServiceName="BthAvctpSvc" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
@@ -41,13 +41,14 @@
     <Item DisplayName="功能访问管理器服务" ServiceName="camsvc" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="连接设备平台服务" ServiceName="CDPSvc" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="Certificate Propagation" ServiceName="CertPropSvc" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
-    <Item DisplayName="Client License Service (ClipSVC)" ServiceName="ClipSVC" ServiceType="Win32OwnProcess, Win32ShareProcess" status="已停止" />
+    <Item DisplayName="Client License Service (ClipSVC)" ServiceName="ClipSVC" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="COM+ System Application" ServiceName="COMSysApp" ServiceType="Win32OwnProcess" status="已停止" />
     <Item DisplayName="CoreMessaging" ServiceName="CoreMessagingRegistrar" ServiceType="Win32ShareProcess" status="正在运行" />
     <Item DisplayName="Intel(R) Content Protection HECI Service" ServiceName="cphs" ServiceType="Win32OwnProcess" status="正在运行" />
     <Item DisplayName="Intel(R) Content Protection HDCP Service" ServiceName="cplspcon" ServiceType="Win32OwnProcess" status="正在运行" />
     <Item DisplayName="Cryptographic Services" ServiceName="CryptSvc" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="DCOM Server Process Launcher" ServiceName="DcomLaunch" ServiceType="Win32ShareProcess" status="正在运行" />
+    <Item DisplayName="DDP Service" ServiceName="ddps" ServiceType="Win32OwnProcess" status="正在运行" />
     <Item DisplayName="debugregsvc" ServiceName="debugregsvc" ServiceType="Win32OwnProcess" status="已停止" />
     <Item DisplayName="Optimize drives" ServiceName="defragsvc" ServiceType="Win32OwnProcess" status="已停止" />
     <Item DisplayName="Developer Tools Service" ServiceName="DeveloperToolsService" ServiceType="Win32OwnProcess" status="已停止" />
@@ -62,12 +63,12 @@
     <Item DisplayName="dmwappushsvc" ServiceName="dmwappushservice" ServiceType="Win32ShareProcess" status="已停止" />
     <Item DisplayName="DNS Client" ServiceName="Dnscache" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="Dolby DAX API Service" ServiceName="Dolby DAX API Service" ServiceType="Win32OwnProcess" status="正在运行" />
-    <Item DisplayName="Delivery Optimization" ServiceName="DoSvc" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
+    <Item DisplayName="Delivery Optimization" ServiceName="DoSvc" ServiceType="Win32OwnProcess, Win32ShareProcess" status="已停止" />
     <Item DisplayName="Wired AutoConfig" ServiceName="dot3svc" ServiceType="Win32ShareProcess" status="已停止" />
     <Item DisplayName="Diagnostic Policy Service" ServiceName="DPS" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="Driver Extension" ServiceName="drvext" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
-    <Item DisplayName="Device Setup Manager" ServiceName="DsmSvc" ServiceType="Win32OwnProcess, Win32ShareProcess" status="已停止" />
-    <Item DisplayName="Data Sharing Service" ServiceName="DsSvc" ServiceType="Win32ShareProcess" status="已停止" />
+    <Item DisplayName="Device Setup Manager" ServiceName="DsmSvc" ServiceType="Win32ShareProcess" status="已停止" />
+    <Item DisplayName="Data Sharing Service" ServiceName="DsSvc" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="数据使用量" ServiceName="DusmSvc" ServiceType="Win32OwnProcess" status="正在运行" />
     <Item DisplayName="Extensible Authentication Protocol" ServiceName="Eaphost" ServiceType="Win32ShareProcess" status="已停止" />
     <Item DisplayName="Encrypting File System (EFS)" ServiceName="EFS" ServiceType="Win32ShareProcess" status="已停止" />
@@ -86,7 +87,8 @@
     <Item DisplayName="FlexNet Licensing Service" ServiceName="FlexNet Licensing Service" ServiceType="Win32OwnProcess" status="正在运行" />
     <Item DisplayName="Windows Font Cache Service" ServiceName="FontCache" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="Windows Camera Frame Server" ServiceName="FrameServer" ServiceType="Win32OwnProcess, Win32ShareProcess" status="已停止" />
-    <Item DisplayName="Group Policy Client" ServiceName="gpsvc" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
+    <Item DisplayName="Google Chrome Elevation Service" ServiceName="GoogleChromeElevationService" ServiceType="Win32OwnProcess" status="已停止" />
+    <Item DisplayName="Group Policy Client" ServiceName="gpsvc" ServiceType="Win32OwnProcess, Win32ShareProcess" status="已停止" />
     <Item DisplayName="GraphicsPerfSvc" ServiceName="GraphicsPerfSvc" ServiceType="Win32ShareProcess" status="已停止" />
     <Item DisplayName="Google 更新服务 (gupdate)" ServiceName="gupdate" ServiceType="Win32OwnProcess" status="已停止" />
     <Item DisplayName="Google 更新服务 (gupdatem)" ServiceName="gupdatem" ServiceType="Win32OwnProcess" status="已停止" />
@@ -180,13 +182,13 @@
     <Item DisplayName="Task Scheduler" ServiceName="Schedule" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="Smart Card Removal Policy" ServiceName="SCPolicySvc" ServiceType="Win32ShareProcess" status="已停止" />
     <Item DisplayName="Windows 备份" ServiceName="SDRSVC" ServiceType="Win32OwnProcess" status="已停止" />
-    <Item DisplayName="Secondary Logon" ServiceName="seclogon" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
+    <Item DisplayName="Secondary Logon" ServiceName="seclogon" ServiceType="Win32ShareProcess" status="已停止" />
     <Item DisplayName="Windows Defender 安全中心服务" ServiceName="SecurityHealthService" ServiceType="Win32OwnProcess" status="正在运行" />
     <Item DisplayName="Windows Remediation Service" ServiceName="sedsvc" ServiceType="Win32OwnProcess" status="正在运行" />
     <Item DisplayName="付款和 NFC/SE 管理器" ServiceName="SEMgrSvc" ServiceType="Win32OwnProcess" status="正在运行" />
     <Item DisplayName="System Event Notification Service" ServiceName="SENS" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="Sensor Data Service" ServiceName="SensorDataService" ServiceType="Win32OwnProcess" status="已停止" />
-    <Item DisplayName="Sensor Service" ServiceName="SensorService" ServiceType="Win32ShareProcess" status="已停止" />
+    <Item DisplayName="Sensor Service" ServiceName="SensorService" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="Sensor Monitoring Service" ServiceName="SensrSvc" ServiceType="Win32ShareProcess" status="已停止" />
     <Item DisplayName="Remote Desktop Configuration" ServiceName="SessionEnv" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="System Guard 运行时监视器代理" ServiceName="SgrmBroker" ServiceType="Win32OwnProcess" status="正在运行" />
@@ -200,7 +202,7 @@
     <Item DisplayName="SNMP Trap" ServiceName="SNMPTRAP" ServiceType="Win32OwnProcess" status="已停止" />
     <Item DisplayName="Windows 感知服务" ServiceName="spectrum" ServiceType="Win32OwnProcess" status="已停止" />
     <Item DisplayName="Print Spooler" ServiceName="Spooler" ServiceType="Win32OwnProcess, InteractiveProcess" status="正在运行" />
-    <Item DisplayName="Software Protection" ServiceName="sppsvc" ServiceType="Win32OwnProcess" status="已停止" />
+    <Item DisplayName="Software Protection" ServiceName="sppsvc" ServiceType="Win32OwnProcess" status="正在运行" />
     <Item DisplayName="SSDP Discovery" ServiceName="SSDPSRV" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="OpenSSH Authentication Agent" ServiceName="ssh-agent" ServiceType="Win32OwnProcess" status="已停止" />
     <Item DisplayName="SSH Server Broker" ServiceName="SshBroker" ServiceType="Win32ShareProcess" status="已停止" />
@@ -251,10 +253,10 @@
     <Item DisplayName="VMware Workstation Server" ServiceName="VMwareHostd" ServiceType="Win32OwnProcess" status="正在运行" />
     <Item DisplayName="Volume Shadow Copy" ServiceName="VSS" ServiceType="Win32OwnProcess" status="已停止" />
     <Item DisplayName="Visual Studio Standard Collector Service 150" ServiceName="VSStandardCollectorService150" ServiceType="Win32OwnProcess" status="正在运行" />
-    <Item DisplayName="Windows Time" ServiceName="W32Time" ServiceType="Win32ShareProcess" status="已停止" />
+    <Item DisplayName="Windows Time" ServiceName="W32Time" ServiceType="Win32OwnProcess, Win32ShareProcess" status="已停止" />
     <Item DisplayName="Windows Update Medic Service" ServiceName="WaaSMedicSvc" ServiceType="Win32OwnProcess, Win32ShareProcess" status="已停止" />
     <Item DisplayName="WalletService" ServiceName="WalletService" ServiceType="Win32ShareProcess" status="已停止" />
-    <Item DisplayName="WarpJITSvc" ServiceName="WarpJITSvc" ServiceType="Win32OwnProcess" status="已停止" />
+    <Item DisplayName="WarpJITSvc" ServiceName="WarpJITSvc" ServiceType="Win32OwnProcess" status="正在运行" />
     <Item DisplayName="Block Level Backup Engine Service" ServiceName="wbengine" ServiceType="Win32OwnProcess" status="已停止" />
     <Item DisplayName="Windows Biometric Service" ServiceName="WbioSrvc" ServiceType="Win32OwnProcess, Win32ShareProcess" status="已停止" />
     <Item DisplayName="Windows Connection Manager" ServiceName="Wcmsvc" ServiceType="Win32OwnProcess" status="正在运行" />
@@ -270,7 +272,7 @@
     <Item DisplayName="Windows Error Reporting Service" ServiceName="WerSvc" ServiceType="Win32OwnProcess" status="已停止" />
     <Item DisplayName="WLAN Direct 服务连接管理器服务" ServiceName="WFDSConMgrSvc" ServiceType="Win32ShareProcess" status="已停止" />
     <Item DisplayName="Still Image Acquisition Events" ServiceName="WiaRpc" ServiceType="Win32ShareProcess" status="已停止" />
-    <Item DisplayName="Windows Defender Antivirus Service" ServiceName="WinDefend" ServiceType="Win32OwnProcess" status="正在运行" />
+    <Item DisplayName="Windows Defender Antivirus Service" ServiceName="WinDefend" ServiceType="Win32OwnProcess" status="已停止" />
     <Item DisplayName="WinHTTP Web Proxy Auto-Discovery Service" ServiceName="WinHttpAutoProxySvc" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="Windows Management Instrumentation" ServiceName="Winmgmt" ServiceType="Win32OwnProcess, Win32ShareProcess" status="正在运行" />
     <Item DisplayName="Windows Remote Management (WS-Management)" ServiceName="WinRM" ServiceType="Win32ShareProcess" status="已停止" />
@@ -294,37 +296,38 @@
     <Item DisplayName="Xbox Accessory Management Service" ServiceName="XboxGipSvc" ServiceType="Win32ShareProcess" status="已停止" />
     <Item DisplayName="Xbox Live 网络服务" ServiceName="XboxNetApiSvc" ServiceType="Win32ShareProcess" status="已停止" />
     <Item DisplayName="Intel(R) PROSet/Wireless Zero Configuration Service" ServiceName="ZeroConfigService" ServiceType="Win32OwnProcess" status="正在运行" />
-    <Item DisplayName="DDP Service" ServiceName="ddps" ServiceType="Win32OwnProcess" status="正在运行" />
-    <Item DisplayName="GameDVR 和广播用户服务_4ba1dd7" ServiceName="BcastDVRUserService_4ba1dd7" ServiceType="240" status="已停止" />
-    <Item DisplayName="蓝牙用户支持服务_4ba1dd7" ServiceName="BluetoothUserService_4ba1dd7" ServiceType="240" status="正在运行" />
-    <Item DisplayName="连接设备平台用户服务_4ba1dd7" ServiceName="CDPUserSvc_4ba1dd7" ServiceType="240" status="正在运行" />
-    <Item DisplayName="DevicePicker_4ba1dd7" ServiceName="DevicePickerUserSvc_4ba1dd7" ServiceType="224" status="已停止" />
-    <Item DisplayName="DevicesFlow_4ba1dd7" ServiceName="DevicesFlowUserSvc_4ba1dd7" ServiceType="224" status="已停止" />
-    <Item DisplayName="MessagingService_4ba1dd7" ServiceName="MessagingService_4ba1dd7" ServiceType="224" status="已停止" />
-    <Item DisplayName="同步主机_4ba1dd7" ServiceName="OneSyncSvc_4ba1dd7" ServiceType="224" status="正在运行" />
-    <Item DisplayName="Contact Data_4ba1dd7" ServiceName="PimIndexMaintenanceSvc_4ba1dd7" ServiceType="224" status="正在运行" />
-    <Item DisplayName="PrintWorkflow_4ba1dd7" ServiceName="PrintWorkflowUserSvc_4ba1dd7" ServiceType="224" status="已停止" />
-    <Item DisplayName="User Data Storage_4ba1dd7" ServiceName="UnistoreSvc_4ba1dd7" ServiceType="224" status="正在运行" />
-    <Item DisplayName="User Data Access_4ba1dd7" ServiceName="UserDataSvc_4ba1dd7" ServiceType="224" status="正在运行" />
-    <Item DisplayName="Windows Push Notifications User Service_4ba1dd7" ServiceName="WpnUserService_4ba1dd7" ServiceType="240" status="正在运行" />
+    <Item DisplayName="GameDVR 和广播用户服务_4d09dc3" ServiceName="BcastDVRUserService_4d09dc3" ServiceType="240" status="已停止" />
+    <Item DisplayName="蓝牙用户支持服务_4d09dc3" ServiceName="BluetoothUserService_4d09dc3" ServiceType="240" status="正在运行" />
+    <Item DisplayName="连接设备平台用户服务_4d09dc3" ServiceName="CDPUserSvc_4d09dc3" ServiceType="240" status="正在运行" />
+    <Item DisplayName="DevicePicker_4d09dc3" ServiceName="DevicePickerUserSvc_4d09dc3" ServiceType="224" status="已停止" />
+    <Item DisplayName="DevicesFlow_4d09dc3" ServiceName="DevicesFlowUserSvc_4d09dc3" ServiceType="224" status="已停止" />
+    <Item DisplayName="MessagingService_4d09dc3" ServiceName="MessagingService_4d09dc3" ServiceType="224" status="已停止" />
+    <Item DisplayName="同步主机_4d09dc3" ServiceName="OneSyncSvc_4d09dc3" ServiceType="224" status="正在运行" />
+    <Item DisplayName="Contact Data_4d09dc3" ServiceName="PimIndexMaintenanceSvc_4d09dc3" ServiceType="224" status="正在运行" />
+    <Item DisplayName="PrintWorkflow_4d09dc3" ServiceName="PrintWorkflowUserSvc_4d09dc3" ServiceType="224" status="已停止" />
+    <Item DisplayName="User Data Storage_4d09dc3" ServiceName="UnistoreSvc_4d09dc3" ServiceType="224" status="正在运行" />
+    <Item DisplayName="User Data Access_4d09dc3" ServiceName="UserDataSvc_4d09dc3" ServiceType="224" status="正在运行" />
+    <Item DisplayName="Windows Push Notifications User Service_4d09dc3" ServiceName="WpnUserService_4d09dc3" ServiceType="240" status="正在运行" />
   </SysServiceInfo>
-  <SysSoftwareInfo>
-    <Item Name="Microsoft OneDrive" PubName="Microsoft Corporation" Version="18.212.1021.0008" Date="" />
+  <SoftwareInfo>
+    <Item Name="Microsoft OneDrive" PubName="Microsoft Corporation" Version="18.222.1104.0007" Date="" />
     <Item Name="MiniPlayer" PubName="北京宽客网络技术有限公司" Version="2.0.0.2" Date="" />
     <Item Name="Python 3.7.1rc2 (64-bit)" PubName="Python Software Foundation" Version="3.7.1122.0" Date="" />
-    <Item Name="网易有道词典" PubName="网易公司" Version="8.4" Date="" />
+    <Item Name="网易有道词典" PubName="网易公司" Version="8.5" Date="" />
     <Item Name="Apache Tomcat 9.0 Tomcat9 (remove only)" PubName="The Apache Software Foundation" Version="9.0.12" Date="" />
     <Item Name="" PubName="" Version="" Date="" />
     <Item Name="EPSON L485 Series Printer Uninstall" PubName="Seiko Epson Corporation" Version="" Date="" />
-    <Item Name="Git version 2.20.0" PubName="The Git Development Community" Version="2.20.0" Date="20181211" />
+    <Item Name="Git version 2.20.1" PubName="The Git Development Community" Version="2.20.1" Date="20181217" />
     <Item Name="Logitech Options" PubName="Logitech" Version="6.92.275" Date="" />
     <Item Name="Mozilla Maintenance Service" PubName="Mozilla" Version="63.0.3" Date="" />
+    <Item Name="Notepad++ (64-bit x64)" PubName="Notepad++ Team" Version="7.6" Date="" />
     <Item Name="Vulkan Run Time Libraries 1.1.70.0" PubName="LunarG, Inc." Version="1.1.70.0" Date="" />
     <Item Name="" PubName="" Version="" Date="" />
     <Item Name="WinRAR 5.61 (64-位)" PubName="win.rar GmbH" Version="5.61.0" Date="" />
     <Item Name="Intel(R) Management Engine Components" PubName="Intel Corporation" Version="1.0.0.0" Date="20180917" />
     <Item Name="Python 3.7.1rc2 pip Bootstrap (64-bit)" PubName="Python Software Foundation" Version="3.7.1122.0" Date="20181016" />
     <Item Name="Microsoft .NET Core Host FX Resolver - 2.1.6 (x64)" PubName="Microsoft Corporation" Version="16.88.27019" Date="20181119" />
+    <Item Name="TortoiseSVN 1.11.0.28416 (64 bit)" PubName="TortoiseSVN" Version="1.11.28416" Date="20181224" />
     <Item Name="Dolby Atmos Windows API SDK" PubName="Dolby Laboratories, Inc." Version="1.1.7.32" Date="20181120" />
     <Item Name="Python 2.7.15 (64-bit)" PubName="Python Software Foundation" Version="2.7.15150" Date="20181128" />
     <Item Name="Microsoft VC++ redistributables repacked." PubName="Intel Corporation" Version="12.0.0.0" Date="20180917" />
@@ -341,7 +344,6 @@
     <Item Name="Microsoft Visual C++ 2017 X64 Minimum Runtime - 14.16.27012" PubName="Microsoft Corporation" Version="14.16.27012" Date="20181119" />
     <Item Name="Free Download Manager" PubName="FreeDownloadManager.ORG" Version="5.1.37.7258" Date="20181016" />
     <Item Name="DiagnosticsHub_CollectionService" PubName="Microsoft Corporation" Version="15.9.28016" Date="20181119" />
-    <Item Name="TortoiseSVN 1.10.2.28392 (64 bit)" PubName="TortoiseSVN" Version="1.10.28392" Date="20181023" />
     <Item Name="Python 3.7.1rc2 Tcl/Tk Support (64-bit)" PubName="Python Software Foundation" Version="3.7.1122.0" Date="20181016" />
     <Item Name="Windows SDK for Windows Store Apps DirectX x64 Remote" PubName="Microsoft Corporation" Version="10.1.17134.12" Date="20181012" />
     <Item Name="Microsoft .NET Core Runtime - 2.1.6 (x64)" PubName="Microsoft Corporation" Version="16.88.27019" Date="20181119" />
@@ -385,5 +387,5 @@
     <Item Name="Intel® PROSet/Wireless WiFi Software" PubName="Intel Corporation" Version="20.90.0.2270" Date="20181026" />
     <Item Name="Python 3.7.1rc2 Standard Library (64-bit)" PubName="Python Software Foundation" Version="3.7.1122.0" Date="20181016" />
     <Item Name="Microsoft System CLR Types for SQL Server vNext CTP1.6" PubName="Microsoft Corporation" Version="15.0.600.33" Date="20181012" />
-  </SysSoftwareInfo>
+  </SoftwareInfo>
 </Environment_Checked_info>
