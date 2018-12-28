@@ -478,3 +478,67 @@ void prmysql::CheckFileToDB(std::map<std::string, std::string> &hwinfo,
         }
     }
 }
+
+std::vector<ST_STRATEGY> prmysql::GetStrategyFromDB() {
+    std::vector<ST_STRATEGY> ret;
+
+    MYSQL_RES *res;
+    MYSQL_ROW row;
+
+    const char *ft_sql = "select SgyID name des setE from strategy "
+                      "where Identity=%s new=1";
+
+    char sql[256] = {0};
+    sprintf(sql, ft_sql, replace_str(ID, "\\", "\\\\").c_str());
+
+    int r = mysql_query(conn, sql);
+
+    res = mysql_use_result(conn);
+
+    while(NULL != (row = mysql_fetch_row(res)))
+    {
+        ST_STRATEGY st_t;
+
+        st_t.SgyID = row[0];
+        st_t.name = row[1];
+        st_t.des = row[2];
+        st_t.set = row[3];
+
+        ret.push_back(st_t);
+    }
+
+    mysql_free_result(res);//释放记录集
+
+    return ret;
+}
+
+std::vector<ST_BWFORM> prmysql::GetBWFormFromDB() {
+    std::vector<ST_BWFORM> ret;
+
+    MYSQL_RES *res;
+    MYSQL_ROW row;
+
+    const char* ft_sql = "select procname des from bwform "
+                      "where Identity=%s enable=1";
+
+    char sql[256] = {0};
+    sprintf(sql, ft_sql, replace_str(ID, "\\", "\\\\").c_str());
+
+    int r = mysql_query(conn, sql);
+
+    res = mysql_use_result(conn);
+
+    while(NULL != (row = mysql_fetch_row(res)))
+    {
+        ST_BWFORM st_t;
+
+        st_t.procname = row[0];
+        st_t.des = row[1];
+
+        ret.push_back(st_t);
+    }
+
+    mysql_free_result(res);//释放记录集
+
+    return ret;
+}

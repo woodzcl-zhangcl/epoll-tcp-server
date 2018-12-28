@@ -257,6 +257,12 @@ unsigned char* protocol::command(unsigned char header, unsigned char* pSrc, size
             char pathfile[256] = {0};
             sprintf(pathfile, "%s/strategy_info.xml", path);
 
+            prmysql sql(db_ip.c_str(), db_password.c_str(), db_password.c_str(), true);
+            sql.SetID(pID);
+            std::vector<ST_STRATEGY> vr = sql.GetStrategyFromDB();
+            prxml xml;
+            xml.GenerateFileStrategy(pID, vr);
+
             int ret = access(pathfile, F_OK);
             if (0 != ret) {
                 char* err = new char[256];
@@ -294,6 +300,12 @@ unsigned char* protocol::command(unsigned char header, unsigned char* pSrc, size
 
             char pathfile[256] = {0};
             sprintf(pathfile, "%s/black_white_form_info.xml", path);
+
+            prmysql sql(db_ip.c_str(), db_password.c_str(), db_password.c_str(), true);
+            sql.SetID(pID);
+            std::vector<ST_BWFORM> vr = sql.GetBWFormFromDB();
+            prxml xml;
+            xml.GenerateFileBWForm(pID, vr);
 
             int ret = access(pathfile, F_OK);
             if (0 != ret) {

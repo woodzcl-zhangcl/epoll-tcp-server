@@ -9,6 +9,10 @@
 #include <libxml/parser.h>
 #include <libxml/tree.h>
 #include <iostream>
+#include <unistd.h>
+
+#include "prmysql.h"
+
 using namespace std;
 
 prxml::prxml() {
@@ -346,4 +350,76 @@ int prxml::Parse(const char* szDocName) {
 
     xmlFreeDoc(doc);
     return 1;
+}
+
+void prxml::GenerateFileStrategy(const char* ID, std::vector<ST_STRATEGY> v_st_t) {
+    char path[256] = {0};
+    sprintf(path, "./%s", ID);
+
+    char pathfile[256] = {0};
+    sprintf(pathfile, "%s/strategy_info.xml", path);
+
+    xmlDocPtr doc = xmlNewDoc(BAD_CAST "1.0");
+    xmlNodePtr root_node = xmlNewNode(NULL, BAD_CAST "strategy_info");
+
+    xmlDocSetRootElement(doc, root_node);
+
+    xmlNodePtr xmlSub;
+
+    for (std::vector<ST_STRATEGY>::iterator it = v_st_t.begin(); it != v_st_t.end(); it++) {
+        xmlSub = xmlNewNode(NULL, BAD_CAST "strategy");
+        xmlAddChild(root_node, xmlSub);
+
+        xmlNewProp(xmlSub, BAD_CAST "id", BAD_CAST (*it).SgyID.c_str());
+        xmlNewProp(xmlSub, BAD_CAST "name", BAD_CAST (*it).name.c_str());
+        xmlNewProp(xmlSub, BAD_CAST "des", BAD_CAST (*it).des.c_str());
+        xmlNewProp(xmlSub, BAD_CAST "set", BAD_CAST (*it).set.c_str());
+    }
+
+    if (0 < v_st_t.size()) {
+        int nRel = xmlSaveFile(pathfile, doc);
+    }
+    else {
+        int ret = access(pathfile, F_OK);
+        if (0 == ret) {
+            remove(pathfile);
+        }
+    }
+
+    xmlFreeDoc(doc);
+}
+
+void prxml::GenerateFileBWForm(const char* ID, std::vector<ST_BWFORM> v_st_t) {
+    char path[256] = {0};
+    sprintf(path, "./%s", ID);
+
+    char pathfile[256] = {0};
+    sprintf(pathfile, "%s/black_white_form_info.xml", path);
+
+    xmlDocPtr doc = xmlNewDoc(BAD_CAST "1.0");
+    xmlNodePtr root_node = xmlNewNode(NULL, BAD_CAST "bwsoftware_info");
+
+    xmlDocSetRootElement(doc, root_node);
+
+    xmlNodePtr xmlSub;
+
+    for (std::vector<ST_BWFORM>::iterator it = v_st_t.begin(); it != v_st_t.end(); it++) {
+        xmlSub = xmlNewNode(NULL, BAD_CAST "bwsoftware");
+        xmlAddChild(root_node, xmlSub);
+
+        xmlNewProp(xmlSub, BAD_CAST "procname", BAD_CAST (*it).procname.c_str());
+        xmlNewProp(xmlSub, BAD_CAST "des", BAD_CAST (*it).des.c_str());
+    }
+
+    if (0 < v_st_t.size()) {
+        int nRel = xmlSaveFile(pathfile, doc);
+    }
+    else {
+        int ret = access(pathfile, F_OK);
+        if (0 == ret) {
+            remove(pathfile);
+        }
+    }
+
+    xmlFreeDoc(doc);
 }

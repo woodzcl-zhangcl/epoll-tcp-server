@@ -8,6 +8,9 @@
 #include <vector>
 #include <map>
 
+struct ST_STRATEGY;
+struct ST_BWFORM;
+
 struct ST_SHIELD
 {
     std::string displayName;
@@ -42,6 +45,8 @@ public:
     virtual ~prxml();
 public:
     int Parse(const char* szDocName);
+    void GenerateFileStrategy(const char* ID, std::vector<ST_STRATEGY> v_st_t);
+    void GenerateFileBWForm(const char* ID, std::vector<ST_BWFORM> v_st_t);
 };
 
 

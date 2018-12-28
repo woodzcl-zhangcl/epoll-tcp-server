@@ -18,6 +18,7 @@ CMakeFiles/czz_serv.dir/protocol.cpp.o
  /home/zhangcl/czz_serv/protocol.h
  /home/zhangcl/czz_serv/prxml.h
 CMakeFiles/czz_serv.dir/prxml.cpp.o
+ /home/zhangcl/czz_serv/prmysql.h
  /home/zhangcl/czz_serv/prxml.cpp
  /home/zhangcl/czz_serv/prxml.h
  /usr/include/libxml2/libxml/SAX.h
