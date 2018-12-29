@@ -150,6 +150,33 @@ main.cpp.s:
 	$(MAKE) -f CMakeFiles/czz_serv.dir/build.make CMakeFiles/czz_serv.dir/main.cpp.s
 .PHONY : main.cpp.s
 
+prjson.o: prjson.cpp.o
+
+.PHONY : prjson.o
+
+# target to build an object file
+prjson.cpp.o:
+	$(MAKE) -f CMakeFiles/czz_serv.dir/build.make CMakeFiles/czz_serv.dir/prjson.cpp.o
+.PHONY : prjson.cpp.o
+
+prjson.i: prjson.cpp.i
+
+.PHONY : prjson.i
+
+# target to preprocess a source file
+prjson.cpp.i:
+	$(MAKE) -f CMakeFiles/czz_serv.dir/build.make CMakeFiles/czz_serv.dir/prjson.cpp.i
+.PHONY : prjson.cpp.i
+
+prjson.s: prjson.cpp.s
+
+.PHONY : prjson.s
+
+# target to generate assembly for a file
+prjson.cpp.s:
+	$(MAKE) -f CMakeFiles/czz_serv.dir/build.make CMakeFiles/czz_serv.dir/prjson.cpp.s
+.PHONY : prjson.cpp.s
+
 prmysql.o: prmysql.cpp.o
 
 .PHONY : prmysql.o
@@ -324,6 +351,9 @@ help:
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
+	@echo "... prjson.o"
+	@echo "... prjson.i"
+	@echo "... prjson.s"
 	@echo "... prmysql.o"
 	@echo "... prmysql.i"
 	@echo "... prmysql.s"

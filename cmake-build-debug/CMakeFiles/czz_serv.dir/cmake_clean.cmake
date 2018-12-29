@@ -6,6 +6,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/czz_serv.dir/userdeal.cpp.o"
   "CMakeFiles/czz_serv.dir/protocol.cpp.o"
   "CMakeFiles/czz_serv.dir/prmysql.cpp.o"
+  "CMakeFiles/czz_serv.dir/prjson.cpp.o"
   "czz_serv.pdb"
   "czz_serv"
 )

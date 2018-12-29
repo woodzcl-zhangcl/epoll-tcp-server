@@ -89,6 +89,12 @@
 		<Unit filename="/home/zhangcl/czz_serv/main.cpp">
 			<Option target="czz_serv"/>
 		</Unit>
+		<Unit filename="/home/zhangcl/czz_serv/prjson.cpp">
+			<Option target="czz_serv"/>
+		</Unit>
+		<Unit filename="/home/zhangcl/czz_serv/prjson.h">
+			<Option target="czz_serv"/>
+		</Unit>
 		<Unit filename="/home/zhangcl/czz_serv/prmysql.cpp">
 			<Option target="czz_serv"/>
 		</Unit>

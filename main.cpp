@@ -9,6 +9,8 @@
 #include "prmysql.h"
 #include <string>
 
+#include "prjson.h"
+
 bool bRun = true;
 
 void Stop(int signo)
@@ -22,6 +24,10 @@ std::string db_username;
 std::string db_password;
 
 int main(int argc, char *argv[]) {
+    prjson pjson;
+
+    //////////////////////////
+
     if (argc < 5) {
         printf("Usage: czz_serv port DbIP DbUserName DbPassword\n");
         return 0;
